@@ -1,8 +1,9 @@
 # Android 4 level GeekTech Basic Architecture study project.
 ### Project themes: Basic architecture(MVVM & Repository), Retrofit, Realm/Room, Recycler.
 
-## Основные задачи:
-   * Создать [Fork](#header_fork) репозитория у себя на аккаунте, все ДЗ выполнять в нем
+## В первую очередь:
+   * Создать [Fork](#header_fork) репозитория у себя на аккаунте (ДЗ выполнять в нем и регулярно пушить изменения в него)
+   * Сделать clone проекта для работы на занятии
     
 #### Ссылка на документацию по API - [LastFm API docs](https://www.last.fm/api)
 
