@@ -30,7 +30,7 @@ public class CounterViewModel extends ViewModel {
 
     void increment() {
         addAction("increment");
-        counter.setValue(counter.getValue() + 1);
+        counter.setValue(counter.getValue() + counter.getValue());
     }
 
     void decrement() {

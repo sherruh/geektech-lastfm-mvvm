@@ -18,6 +18,7 @@ import java.util.Date;
 public class CounterHistoryFragment extends Fragment {
 
     private CounterViewModel mViewModel;
+    private ActionsHistoryAdapter mAdapter;
 
     public static CounterHistoryFragment newInstance() {
         return new CounterHistoryFragment();
@@ -38,11 +39,9 @@ public class CounterHistoryFragment extends Fragment {
         mViewModel = ViewModelProviders.of(getActivity())
                 .get(CounterViewModel.class);
 
-        mViewModel.counter.observe(this, integer ->
-                Log.d("ololo", "History counter " + integer)
-        );
-
         mViewModel.actionsHistory.observe(this, pairs -> {
+            //TODO: Set values to adapter
+//            mAdapter.setActions(pairs);
             for (Pair<String, Date> pair : pairs) {
                 Log.d("ololo", pair.toString());
             }
