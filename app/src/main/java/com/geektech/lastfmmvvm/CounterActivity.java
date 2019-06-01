@@ -12,6 +12,7 @@ import com.geektech.lastfmmvvm.ui.ObservableUser;
 import com.geektech.lastfmmvvm.ui.counter.CounterFragment;
 import com.geektech.lastfmmvvm.ui.counter.CounterHistoryFragment;
 import com.geektech.lastfmmvvm.ui.notes.AddNoteFragment;
+import com.geektech.lastfmmvvm.ui.notes.NotesFragment;
 
 public class CounterActivity extends AppCompatActivity {
 
@@ -44,7 +45,7 @@ public class CounterActivity extends AppCompatActivity {
 
     public class CounterPagerAdapter extends FragmentPagerAdapter {
 
-        private final static int PAGES_COUNT = 3;
+        private final static int PAGES_COUNT = 4;
 
         public CounterPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -64,6 +65,8 @@ public class CounterActivity extends AppCompatActivity {
                 case 2:
                     fragment = AddNoteFragment.newInstance();
                     break;
+                case 3:
+                    fragment = NotesFragment.newInstance();
             }
 
             return fragment;
