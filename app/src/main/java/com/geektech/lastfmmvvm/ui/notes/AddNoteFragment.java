@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.geektech.lastfmmvvm.R;
+import com.geektech.lastfmmvvm.entity.Note;
 
 import java.util.List;
 
@@ -35,9 +36,9 @@ public class AddNoteFragment extends Fragment {
         mViewModel = ViewModelProviders.of(getActivity())
                 .get(NotesViewModel.class);
 
-        mViewModel.notes.observe(this, new Observer<List<String>>() {
+        mViewModel.notes.observe(this, new Observer<List<Note>>() {
             @Override
-            public void onChanged(@Nullable List<String> strings) {
+            public void onChanged(@Nullable List<Note> strings) {
                 Log.d("ololo", "Notes changed");
             }
         });
@@ -57,6 +58,8 @@ public class AddNoteFragment extends Fragment {
         buttonSave = view.findViewById(R.id.button_save);
         buttonSave.setOnClickListener(v -> {
            mViewModel.addNote(inputNote.getText().toString().trim());
+           inputNote.setText("");
+           inputNote.setHint("Name");
         });
     }
 }

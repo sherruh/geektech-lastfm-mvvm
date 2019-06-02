@@ -5,11 +5,12 @@ import android.arch.lifecycle.ViewModel;
 
 import com.geektech.lastfmmvvm.App;
 import com.geektech.lastfmmvvm.data.NotesRepository;
+import com.geektech.lastfmmvvm.entity.Note;
 
 import java.util.List;
 
 public class NotesViewModel extends ViewModel {
-    LiveData<List<String>> notes;
+    LiveData<List<Note>> notes;
     private NotesRepository repository = App.notesRepository;
 
     public NotesViewModel() {

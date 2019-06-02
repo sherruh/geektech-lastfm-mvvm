@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.geektech.lastfmmvvm.R;
+import com.geektech.lastfmmvvm.entity.Note;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,9 +48,9 @@ public class NotesFragment extends Fragment {
         if (getActivity() == null) return;
         mViewModel = ViewModelProviders.of(getActivity())
                 .get(NotesViewModel.class);
-        mViewModel.notes.observe(this, new Observer<List<String>>() {
+        mViewModel.notes.observe(this, new Observer<List<Note>>() {
             @Override
-            public void onChanged(@Nullable List<String> notes) {
+            public void onChanged(@Nullable List<Note> notes) {
                 mAdapter.setNotes(notes);
             }
         });

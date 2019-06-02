@@ -5,7 +5,6 @@ import java.util.Date;
 public class Note {
 
     private String name;
-    private String description;
     private Date date;
 
     public String getName() {
@@ -16,14 +15,6 @@ public class Note {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     public Date getDate() {
         return date;
     }
@@ -32,9 +23,8 @@ public class Note {
         this.date = date;
     }
 
-    public Note(String name, String description, Date date) {
+    public Note(String name, Date date) {
         this.name = name;
-        this.description = description;
         this.date = date;
     }
 }

@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.geektech.lastfmmvvm.R;
+import com.geektech.lastfmmvvm.entity.Note;
 import com.geektech.lastfmmvvm.ui.counter.ActionsHistoryAdapter;
 
 import java.util.ArrayList;
@@ -15,9 +16,9 @@ import java.util.List;
 
 public class NotesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private ArrayList<String> mNotes;
+    private ArrayList<Note> mNotes;
 
-    public NotesAdapter(ArrayList<String> notes) {
+    public NotesAdapter(ArrayList<Note> notes) {
         mNotes = notes;
     }
 
@@ -41,7 +42,7 @@ public class NotesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         return mNotes.size();
     }
 
-    public void setNotes(List<String> notes) {
+    public void setNotes(List<Note> notes) {
         mNotes.clear();
         mNotes.addAll(notes);
         notifyDataSetChanged();
@@ -56,8 +57,8 @@ public class NotesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             textName = itemView.findViewById(R.id.text_note_name);
         }
 
-        public void onBind(String note){
-            textName.setText(note);
+        public void onBind(Note note){
+            textName.setText(note.getName());
         }
     }
 }
